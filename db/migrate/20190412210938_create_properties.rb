@@ -2,12 +2,12 @@ class CreateProperties < ActiveRecord::Migration[5.2]
   def change
     create_table :properties do |t|
       t.string  :number
-      # t.string  :full_address
+      t.string  :full_address
       t.integer :square_feet
-      # t.integer :lanai
-      # t.integer :floors
-      # t.string  :frontage
-      # t.string  :view
+      t.integer :lanai
+      t.integer :floors
+      t.string  :frontage
+      t.string  :view
       t.timestamps
     end
   end
