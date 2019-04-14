@@ -3,4 +3,8 @@ class PropertiesController < ApplicationController
         @sort_field = params[:sort] ? params[:sort] : "number"
         @properties = Property.sort_by(@sort_field)
     end
+
+    def show
+        @property = Property.find_by(:id => params[:id])
+    end
 end

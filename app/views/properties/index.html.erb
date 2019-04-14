@@ -12,6 +12,7 @@
         <table id="properties">
             <thead>
                 <tr>
+                    <th scope="col"></th>
                     <th scope="col">Number</th>
                     <th scope="col">Frontage</th>
                     <th scope="col">Floors</th>
@@ -23,6 +24,7 @@
             <tbody>
                 <% @properties.each do | property | %>
                     <tr>
+                        <td><%= link_to "View", property_path(property.id) %></td>
                         <td><%= property.number %></td>
                         <td><%= property.frontage %></td>
                         <td><%= property.floors %></td>
