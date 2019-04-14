@@ -1,28 +1,38 @@
 <div class="page-container">
-    <h1>Property List</h1>
-    <table id="properties">
-        <thead>
-            <tr>
-                <th scope="col">Number</th>
-                <th scope="col">Frontage</th>
-                <th scope="col">Floors</th>
-                <th scope="col">Square Feet</th>
-                <th scope="col">Lanai</th>
-                <th scope="col">View</th>
-            </tr>
-        </thead>
-        <tbody>
-            <% @properties.each do | property | %>
-                <tr>
-                    <td><%= property.number %></td>
-                    <td><%= property.frontage %></td>
-                    <td><%= property.floors %></td>
-                    <td><%= property.square_feet %></td>       
-                    <td><%= property.lanai %></td>
-                    <td><%= property.view %></td>
-                </tr>
+    <div id="prop-index-title-container">
+        <h1 class="itemcenter">Property List</h1>
+        <div>
+            <%= form_tag properties_path, method: "get" do %> 
+                <%= sort_select_tag(@sort_field) %>
+                <%= submit_tag "Sort" %>
             <% end %>
-        </tbody>
-    </table>
+        </div>
+    </div>
+    <div>
+        <table id="properties">
+            <thead>
+                <tr>
+                    <th scope="col">Number</th>
+                    <th scope="col">Frontage</th>
+                    <th scope="col">Floors</th>
+                    <th scope="col">Square Feet</th>
+                    <th scope="col">Lanai</th>
+                    <th scope="col">View</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% @properties.each do | property | %>
+                    <tr>
+                        <td><%= property.number %></td>
+                        <td><%= property.frontage %></td>
+                        <td><%= property.floors %></td>
+                        <td><%= property.square_feet %></td>       
+                        <td><%= property.lanai %></td>
+                        <td><%= property.view %></td>
+                    </tr>
+                <% end %>
+            </tbody>
+        </table>
+    </div>
 </div>
 

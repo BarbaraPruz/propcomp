@@ -1,5 +1,6 @@
 class PropertiesController < ApplicationController
     def index
-        @properties = Property.all
+        @sort_field = params[:sort] ? params[:sort] : "number"
+        @properties = Property.sort_by(@sort_field)
     end
 end
