@@ -10,10 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_12_210938) do
+ActiveRecord::Schema.define(version: 2019_04_14_044415) do
 
   create_table "properties", force: :cascade do |t|
-    t.string "number"
+    t.integer "number"
     t.string "full_address"
     t.integer "square_feet"
     t.integer "lanai"
@@ -22,6 +22,18 @@ ActiveRecord::Schema.define(version: 2019_04_12_210938) do
     t.string "view"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "sales", force: :cascade do |t|
+    t.integer "mls"
+    t.integer "number"
+    t.string "status"
+    t.string "condition"
+    t.string "sold_price"
+    t.date "sold_date"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "property_id"
   end
 
 end

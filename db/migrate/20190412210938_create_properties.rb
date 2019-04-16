@@ -1,7 +1,7 @@
 class CreateProperties < ActiveRecord::Migration[5.2]
   def change
     create_table :properties do |t|
-      t.string  :number
+      t.integer  :number
       t.string  :full_address
       t.integer :square_feet
       t.integer :lanai

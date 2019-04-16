@@ -1,3 +1,5 @@
+require 'pry'
+
 class PropertiesController < ApplicationController
     def index
         @sort_field = params[:sort] ? params[:sort] : "number"
