@@ -7,4 +7,15 @@
     Frontage: <%= @property.frontage %><br/>
     View: <%= @property.view %><br/>
     </p>
+    <h3>Sale Listings</h3>
+    <% @propSales.each do | sale | %>
+        <h4>MLS: <%= sale.mls %></h4>
+        <p>
+            Status: <%= sale.status %><br/>
+            Condition: <%= sale.condition %><br/>
+            <% if sale.sold_price then %>
+                Sold on <%= sale.sold_date %> for <%= sale.sold_price %>
+            <% end %>
+        </p>
+    <% end %>
 </div>
