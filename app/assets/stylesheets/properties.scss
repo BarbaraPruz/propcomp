@@ -4,44 +4,29 @@
 
 /* the title bar with sort drop down */
 #prop-index-title-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 5px;
+    justify-items: center;
 }
-  
-.itemcenter {
-    flex-basis: 80%;
-    text-align: center;
-}
+#prop-index-title-container h1 { grid-column-start: 2; }
+#prop-index-title-container form { 
+    margin-left: auto;
+    margin-right: 2em;
+    margin-top: 0.5em;
+}  
 #prop-index-title-container select {
-    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-    margin: .5em;
+     margin: .5em;
 }
 #prop-index-title-container submit {
-    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
     background-color: #f2f2f2;
 }
-/* the properties table */
-#properties {
-    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-    border-collapse: collapse;
-    width: 80%;
-    margin: auto;
-}
-  
-#properties td, #properties th {
-    border: 1px solid #ddd;
-    padding: 8px;
-}
-  
-#properties tr:nth-child(even){background-color: #f2f2f2;}
-  
-#properties tr:hover {background-color: #ddd;}
-  
-#properties th {
-    padding-top: 12px;
-    padding-bottom: 12px;
-    text-align: left;
-    background-color: #00CED1;
-    color: white;
+
+
+/* show page */
+#property-details {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-column-gap: 5px;    
+    margin: 2em;
 }

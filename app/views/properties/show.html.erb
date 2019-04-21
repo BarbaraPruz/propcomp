@@ -1,21 +1,29 @@
 <div class="page-container">
     <h2><%= @property.full_address %></h2>
-    <p>
-    Square Feet: <%= @property.square_feet %><br/>
-    Lanai: <%= @property.lanai %><br/>
-    Floors: <%= @property.floors %><br/>
-    Frontage: <%= @property.frontage %><br/>
-    View: <%= @property.view %><br/>
-    </p>
+    <div id="property-details">
+        <p>Square Feet: <%= @property.square_feet %></p>
+        <p>Lanai: <%= @property.lanai %></p>
+        <p>Floors: <%= @property.floors %></p>
+        <p>Frontage: <%= @property.frontage %></p>
+        <p>View: <%= @property.view %></p>
+    </div>
     <h3>Sale Listings</h3>
-    <% @propSales.each do | sale | %>
-        <h4>MLS: <%= sale.mls %></h4>
-        <p>
-            Status: <%= sale.status %><br/>
-            Condition: <%= sale.condition %><br/>
-            <% if sale.sold_price then %>
-                Sold on <%= sale.sold_date %> for <%= sale.sold_price %>
-            <% end %>
-        </p>
-    <% end %>
+    <table>
+        <tr>
+            <th scope="col">MLS</th>
+            <th scope="col">Status</th>
+            <th scope="col">Condition</th>
+            <th scope="col">Sold Date</th>
+            <th scope="col">Sold Price</th>
+        </tr>
+        <% @propSales.each do | sale | %>
+            <tr>
+                <td class="align-left"><%= sale.mls %></td>
+                <td class="align-left"><%= sale.status %></td>
+                <td class="align-left"><%= sale.condition %></td>
+                <td class="align-left"><%= sale.sold_date %></td>
+                <td class="align-left"><%= sale.sold_price %></td>
+            </tr>
+        <% end %>
+    </table>
 </div>

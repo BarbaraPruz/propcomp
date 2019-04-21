@@ -1,12 +1,10 @@
 <div class="page-container">
     <div id="prop-index-title-container">
-        <h1 class="itemcenter">Property List</h1>
-        <div>
-            <%= form_tag properties_path, method: "get" do %> 
-                <%= sort_select_tag(@sort_field) %>
-                <%= submit_tag "Sort" %>
-            <% end %>
-        </div>
+        <h1>Property List</h1>
+        <%= form_tag properties_path, method: "get" do %> 
+            <%= sort_select_tag(@sort_field) %>
+            <%= submit_tag "Sort" %>
+        <% end %>
     </div>
     <div>
         <table id="properties">
@@ -26,11 +24,11 @@
                     <tr>
                         <td><%= link_to "View", property_path(property.id) %></td>
                         <td><%= property.number %></td>
-                        <td><%= property.frontage %></td>
+                        <td class="align-left"><%= property.frontage %></td>
                         <td><%= property.floors %></td>
                         <td><%= property.square_feet %></td>       
                         <td><%= property.lanai %></td>
-                        <td><%= property.view %></td>
+                        <td class="align-left"><%= property.view %></td>
                     </tr>
                 <% end %>
             </tbody>

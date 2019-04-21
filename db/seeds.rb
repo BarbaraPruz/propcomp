@@ -200,9 +200,19 @@ properties.each do |p|
 end
 
 sales.each do |s| 
-    id = Sale.create( :mls => s[:mls], :number => s[:number], :status => s[:status],
-        :condition => s[:condition], :sold_price => s[:sold_price], :sold_date => s[:sold_date],
+    date = nil
+    if s[:sold_date] then
+        d = Date.strptime(s[:sold_date], '%m/%d/%Y')
+        date = d.strftime('%d/%m/%Y')
+    end
+    sale = Sale.create( :mls => s[:mls], :number => s[:number], :status => s[:status],
+        :condition => s[:condition], :sold_price => s[:sold_price], :sold_date => date,
         :property_id => properties_ids[s[:number]])
-    puts "Sale #{s[:number]} #{properties_ids[s[:number]]}"
+    if !sale.id then
+        puts "Error on Sale #{s[:mls]}"
+        puts "#{sale.errors.full_messages}"
+    else 
+        puts "Sale #{sale.mls} #{sale.sold_price} #{sale.sold_date} #{s[:sold_date]}"
+    end
 end
 
