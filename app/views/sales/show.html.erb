@@ -1,0 +1,25 @@
+<h1>Sales Comparison from <%= @start_date %> to <%= @end_date %>
+<h3>Sale Listings</h3>
+<table>
+    <tr>
+        <th scope="col">MLS</th>
+        <th scope="col">Number</th>
+        <th scope="col">Condition</th>
+        <th scope="col">Floors</th>
+        <th scope="col">Frontage</th>
+        <th scope="col">Sold Date</th>
+        <th scope="col">Sold Price</th>
+    </tr>
+    <% @comp_sales.each do | sale | %>
+        <tr>
+            <td class="align-left"><%= sale.mls %></td>
+            <td class="align-left"><%= sale.number %></td>
+            <td class="align-left"><%= sale.condition %></td>
+            <td class="align-left"><%= sale.property.floors %></td>
+            <td class="align-left"><%= sale.property.frontage %></td>
+            <td class="align-left"><%= sale.sold_date %></td>
+            <td class="align-left"><%= sale.sold_price %></td>
+        </tr>
+    <% end %>
+</table>
+

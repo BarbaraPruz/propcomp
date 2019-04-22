@@ -10,6 +10,7 @@
     <h3>Sale Listings</h3>
     <table>
         <tr>
+            <th></th>
             <th scope="col">MLS</th>
             <th scope="col">Status</th>
             <th scope="col">Condition</th>
@@ -18,6 +19,9 @@
         </tr>
         <% @propSales.each do | sale | %>
             <tr>
+                <% if sale.sold_date then %>
+                    <td><%= link_to "Compare", sale_path(sale.id) %></td> 
+                <% end %>
                 <td class="align-left"><%= sale.mls %></td>
                 <td class="align-left"><%= sale.status %></td>
                 <td class="align-left"><%= sale.condition %></td>
