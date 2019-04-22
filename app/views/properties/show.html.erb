@@ -20,7 +20,7 @@
         <% @propSales.each do | sale | %>
             <tr>
                 <% if sale.sold_date then %>
-                    <td><%= link_to "Compare", sale_path(sale.id) %></td> 
+                    <td><%= link_to "Compare", compare_path(sale.id) %></td> 
                 <% end %>
                 <td class="align-left"><%= sale.mls %></td>
                 <td class="align-left"><%= sale.status %></td>

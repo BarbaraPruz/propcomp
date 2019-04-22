@@ -3,5 +3,5 @@ Rails.application.routes.draw do
   root 'properties#index'
   resources :properties, except: [:new, :create, :delete, :edit] 
 
-  get '/sales/:id', to: 'sales#show', as: 'sale'
+  get '/sales/:id/compare', to: 'sales#compare', as: 'compare'
 end
