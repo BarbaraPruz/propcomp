@@ -1,24 +1,20 @@
-# README
+# propcomp
+Simple app to show real estate property sales and compare to other sales during the same time period.
+DB is seeded with sales data obtained from mls.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+Installation Instructions
+-------------------------
+Fork and clone this GIT repo.
 
-* Ruby version
+Running ike
+------------------
+Use rake to migrate and seed database.   
+Run rails server.
 
-* System dependencies
+License
+-------
+Open source under the terms of the MIT License.
 
-* Configuration
 
-* Database creation
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...

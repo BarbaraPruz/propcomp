@@ -7,8 +7,8 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'pry'
 properties = [
-    { :number => 443, :square_feet => 1557, :lanai => 380, :floors => 3, :view=> "Marina/Canal, Sunrise",  :frontage=> "Marina", :full_address => "443 Opihikao Place 171" },
-    { :number => 347, :square_feet => 1250, :lanai => 420, :floors => 3, :view=> "Marina/Canal, Mountain", :frontage=> "Marina", :full_address => "347 Opihikao Place 411" },
+    { :number => 443, :square_feet => 1557, :lanai => 380, :floors => 2, :view=> "Marina/Canal, Sunrise",  :frontage=> "Marina", :full_address => "443 Opihikao Place 171" },
+    { :number => 347, :square_feet => 1250, :lanai => 420, :floors => 1, :view=> "Marina/Canal, Mountain", :frontage=> "Marina", :full_address => "347 Opihikao Place 411" },
     { :number => 217, :square_feet => 1518, :lanai => 210, :floors => 3, :view=> "Garden",                 :frontage=> "Other",  :full_address => "217 Opihikao Way 217" },
     { :number => 318, :square_feet => 1582, :lanai => 0,   :floors => 3, :view=> "Mountain",               :frontage=> "Other",  :full_address => "318 Opihikao Place 611" },
     { :number => 120, :square_feet => 1382, :lanai => 380, :floors => 3, :view=> "Marina/Canal",           :frontage=> "Marina", :full_address => "120 Opihikao Way 1032" },
