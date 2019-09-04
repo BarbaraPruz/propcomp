@@ -7,7 +7,7 @@ Installation Instructions
 -------------------------
 Fork and clone this GIT repo.
 
-Running ike
+Running propcomp
 ------------------
 Use rake to migrate and seed database.   
 Run rails server.
